@@ -7,6 +7,8 @@ class Tile_Calculator_3
 {
     static void Main(string[] args)
     {
+        while (true)
+        {
         const double COST_PER_HOUR = 86.0;
         const double SQFT_PER_HOUR = 20.0;
         const char INPUT_TRIANGLE = 't';
@@ -66,6 +68,15 @@ class Tile_Calculator_3
 
         double totalCost = flooringCost + labourCost;
         Console.WriteLine($"And the Total cost of job is {totalCost} dollars.");
+
+        Console.WriteLine("Press Enter to play again or any other key to exit.");
+            if (Console.ReadKey().Key != ConsoleKey.Enter)
+            {
+                break;
+            }
+            Console.WriteLine("\n");
+        }
+
     }
 }
 
